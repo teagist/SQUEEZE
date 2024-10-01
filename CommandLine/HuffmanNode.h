@@ -23,13 +23,13 @@ class BinaryHeap;
 
 class HNode
 {
-	char item;
+    char item;
     int freq;
     HNode* left;
     HNode* right;
 
     HNode(char newItem, int newFreq): item(newItem), freq(newFreq), 
-								      left(NULL), right(NULL) {};
+				      left(NULL), right(NULL) {};
 								      
     HNode(char newItem, int newFreq, HNode* newLeft, HNode* newRight): 
 			  item(newItem), freq(newFreq), left(newLeft), right(newRight) {};
