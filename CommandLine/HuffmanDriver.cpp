@@ -205,43 +205,43 @@ int validateInput(int &value)
 //****************************************************************************
 void encodeMessage(HuffmanTree& HTree, BinaryHeap& BHeap)
 {
-	try
+    try
+    {
+	string message = "";
+		
+	int occurrences[127];
+	initArrayToZero(occurrences, 127);
+		
+	cout << "\nPlease enter a message to encode with at least 2 characters.";
+	cout << endl;
+		
+	cin.clear();
+	fflush(stdin);
+	getline(cin, message);
+		
+	while (message.length() < 2)
 	{
-		string message = "";
-		
-		int occurrences[127];
-		initArrayToZero(occurrences, 127);
-		
-		cout << "\nPlease enter a message to encode with at least 2 characters.";
-		cout << endl;
-		
-		cin.clear();
-		fflush(stdin);
-		getline(cin, message);
-		
-		while (message.length() < 2)
-		{
-			cerr << "\nError, entered string was not the specified length.\n";
-			system("pause");
-			system("cls");
+	    cerr << "\nError, entered string was not the specified length.\n";
+	    system("pause");
+	    system("cls");
 			
-			cerr << "\nPlease enter a message to encode with at least 2";
-			cerr << " characters.";
-			cout << endl;
+	    cerr << "\nPlease enter a message to encode with at least 2";
+	    cerr << " characters.";
+	    cout << endl;
 			
-			cin.clear();
-			fflush(stdin);
-			getline(cin, message);
-		}
+	    cin.clear();
+	    fflush(stdin);
+	    getline(cin, message);
+	}
 					
-		fillHeap(message, occurrences, BHeap);
-		displayCodes(HTree, BHeap);
-		system("pause");
-	}
-	catch(const exception& ex)
-	{
-		cerr << "Encode Message Exception: " << ex.what() << endl;
-	}
+	fillHeap(message, occurrences, BHeap);
+	displayCodes(HTree, BHeap);
+	system("pause");
+    }
+    catch(const exception& ex)
+    {
+	cerr << "Encode Message Exception: " << ex.what() << endl;
+    }
 }
 
 
