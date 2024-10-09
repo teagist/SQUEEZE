@@ -1,4 +1,5 @@
 Welcome to S.Q.U.E.E.Z.E!
+Streamlined Quality Utility for Efficient Encoding and Zipping Engine
 
 This will allow you to encode and compress your text files using Huffman's 
 algorithm.  You can then save off the new file afterwards.  
