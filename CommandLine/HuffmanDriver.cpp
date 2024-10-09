@@ -321,15 +321,15 @@ void initArrayToZero(int array[], int size)
 //****************************************************************************
 void displayCodes(HuffmanTree& HTree, BinaryHeap& BHeap)
 {
-	HTree.FillTree(BHeap);	
+    HTree.FillTree(BHeap);	
 	
-	int codes[100];
-	initArrayToZero(codes, 100);
+    int codes[100];
+    initArrayToZero(codes, 100);
 	
-	cout << endl << endl;
-	cout << "  Character  | Huffman Code" << endl;
-	cout << "_____________|_______________" << endl;
+    cout << endl << endl;
+    cout << "  Character  | Huffman Code" << endl;
+    cout << "_____________|_______________" << endl;
 	
-	HTree.PrintCodes(codes, 0);
-	cout << endl;
+    HTree.PrintCodes(codes, 0);
+    cout << endl;
 }
