@@ -258,34 +258,34 @@ void encodeMessage(HuffmanTree& HTree, BinaryHeap& BHeap)
 //****************************************************************************
 void fillHeap(string message, int occur[], BinaryHeap& BHeap)
 {
-	char letter = 'z';
-	int  freq   = -1;
-	int  ctr    = 0;
+    char letter = 'z';
+    int  freq   = -1;
+    int  ctr    = 0;
 	
-	try
+    try
+    {
+	for (int i = 0; i < message.size(); i++)
 	{
-		for (int i = 0; i < message.size(); i++)
-		{
-	        occur[message[i]/* - 'a'*/]++;
-	    }
+	    occur[message[i]/* - 'a'*/]++;
+	}
 		
-		while (ctr < message.size())			 
-		{
-			if (occur[message[ctr] /*- 'a'*/] != 0)	
-			{
-				letter = message[ctr];
-				freq = occur[message[ctr]/* - 'a'*/];
-				
-				BHeap.Insert(letter, freq);
-				occur[message[ctr]/* - 'a'*/] = 0;
-			}
-			ctr = ctr + 1;
-		}		
-	}
-	catch(const exception& ex)
+	while (ctr < message.size())			 
 	{
-		cerr << "Fill Heap Exception: " << ex.what() << endl;
-	}
+	    if (occur[message[ctr] /*- 'a'*/] != 0)	
+	    {
+	        letter = message[ctr];
+		freq = occur[message[ctr]/* - 'a'*/];
+				
+		BHeap.Insert(letter, freq);
+		occur[message[ctr]/* - 'a'*/] = 0;
+	    }
+	    ctr = ctr + 1;
+	}		
+    }
+    catch(const exception& ex)
+    {
+	cerr << "Fill Heap Exception: " << ex.what() << endl;
+    }
 }
 
 
