@@ -175,19 +175,19 @@ void choose(HuffmanTree& HTree, BinaryHeap& BHeap)
 //***************************************************************************
 int validateInput(int &value)
 {
-	while ( !(cin >> value) )
-	{
-		cout << "\nPlease enter a valid option from the menu." << endl;
-		system("pause");
-		system("cls");
+    while ( !(cin >> value) )
+    {
+        cout << "\nPlease enter a valid option from the menu." << endl;
+	system("pause");
+	system("cls");
 		
-		printMenu();
-		cout << "\n>> ";
+	printMenu();
+	cout << "\n>> ";
 						
-		cin.clear();
-		cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-	}
-	return value;	
+	cin.clear();
+	cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
+    return value;	
 }
 
 
