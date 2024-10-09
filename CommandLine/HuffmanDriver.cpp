@@ -300,10 +300,10 @@ void fillHeap(string message, int occur[], BinaryHeap& BHeap)
 //****************************************************************************
 void initArrayToZero(int array[], int size)
 {
-	for (int i = 0; i < size; i++)
-	{
-		array[i] = 0;
-	}
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = 0;
+    }
 }
 
 
