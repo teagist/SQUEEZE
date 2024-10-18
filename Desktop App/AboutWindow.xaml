@@ -1,0 +1,29 @@
+<Window x:Class="FileEncoder.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileEncoder"
+        mc:Ignorable="d"
+        Title="About" Height="350" Width="400"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FF2C2C2C">
+        <TextBox Name="AboutTextBox" HorizontalAlignment="Center" Text=""
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="290"
+                 Height="84" Margin="0,167,0,0"
+                 BorderBrush="White"
+                 Background="#FF1C1C1C"
+                 Foreground="AliceBlue"/>
+
+        <Image HorizontalAlignment="Left" Height="99" Margin="152,37,0,0"
+               VerticalAlignment="Top" Width="100"
+               Source="Images\taliesinLogo.png"/>
+
+        <Button Content="OK" HorizontalAlignment="Center" Margin="0,270,0,0"
+                VerticalAlignment="Top" Width="52"
+                Background="Gray" Foreground="AliceBlue"
+                BorderThickness="1.5,1.5,1.5,1.5" BorderBrush="Silver"
+                Click="OKButton_Click"/>
+    </Grid>
+</Window>
