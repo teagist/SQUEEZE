@@ -101,7 +101,7 @@ void Logger::readVersionInfo()
 //				 displayed.    
 //****************************************************************************
 void Logger::printStatusMessage(const std::string& message, 
-													const int& status) const
+			        const int& status) const
 {
 	if (status == OK)
 	{
